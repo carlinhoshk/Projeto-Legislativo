@@ -1,7 +1,6 @@
 import os
 import csv
- 
-# abra o arquivo csv
+
 with open('nomes.csv', 'r') as csvfile:
     # crie um leitor csv
     reader = csv.reader(csvfile)
@@ -13,15 +12,14 @@ with open('nomes.csv', 'r') as csvfile:
        # pegue o estado
         estado = row[2]
 
-        print(nome.replace(" ", ""))
-
+        print("{}-{}-{}".format(nome, partido, estado))
         # pegue nome de todos arquivos da pasta banco-fotos
-        print("{}-{}-{}".format(nome.replace(" ", "_"), partido, estado))
+        #salve a saida para um txt
+        
+        
 
 
        # renomeie o arquivo
        # os.rename('banco-fotos/' + nome, 'banco-fotos-renomeados/'nome.replace(" ", "")+"-"+partido + "-"+ estado'.jpg')
        # mostre o nome do arquivo
            
-
-

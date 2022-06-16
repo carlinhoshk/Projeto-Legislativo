@@ -17,9 +17,11 @@ for current_page_index in range(number_of_pages):
         xref = img[0]
         image = fitz.Pixmap(pdf_file, xref)
         #if it is a is GRAY or RGB image
+        a=+1
         if image.n < 5:        
-            image.writePNG("{}/image{}-{}.png".format(location,current_page_index, img_index))
+            image.writePNG("{}/image-{}.png".format(location,a, img_index))
         #if it is CMYK: convert to RGB first
+        
         else:                
             new_image = fitz.Pixmap(fitz.csRGB, image)
-            new_image.writePNG("{}/image{}-{}.png".foramt(location,current_page_index, img_index))
+            new_image.writePNG("{}/image-{}-{}.png".foramt(location,a,img_index))
