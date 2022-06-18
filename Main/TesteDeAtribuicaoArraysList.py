@@ -3,14 +3,18 @@ import cv2
 import numpy as np
 
 known_face_encodings =[]
-
+#função encoda quase igual do proprio criador, só usei a API dele para retorna um objeto
 def face_encoda(img):
     img = face_recognition.face_encodings(img)
     #print(img)
     return img
 
 #def    
+#
+
 obama_image = face_recognition.load_image_file("carometro_legislatura56/image-279.jpg")
+
+#atribuo o objeto retornado da função para o array faces_know_encodadas 
 
 c = known_face_encodings.append(face_encoda(obama_image))
 print(known_face_encodings)
